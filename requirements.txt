@@ -1,0 +1,7 @@
+streamlit==0.65.2
+Pillow
+numpy
+matplotlib
+plotly
+streamlit_cropper
+opencv-python
