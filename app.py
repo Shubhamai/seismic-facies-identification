@@ -290,3 +290,5 @@ if code != "":
     except Exception as exception:
         st.error(
             f"Error Occured, Please make sure that code is correct! Error is : {exception}")
+        
+st.success("Thanks for checking this out! please like the post https://discourse.aicrowd.com/t/explained-by-the-community-win-4-x-dji-mavic-drones/3636/4?u=shubhamai 🙂")
