@@ -4,4 +4,4 @@ numpy
 matplotlib
 plotly
 streamlit_cropper
-opencv-python
+opencv-python-headless==4.2.0.32
