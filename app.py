@@ -29,9 +29,9 @@ st.markdown(
 st.markdown("""  
 Made By : [Shubhamai](https://shubhamai.com/)
 
-Github : [Shubhamai](https://github.com/Shubhamai)
+Github Project : https://github.com/Shubhamai/seismic-facies-identification
 
-Twitter : [Shubhamai](https://twitter.com/Shubhamai)""")
+Google Colab Notebook : https://colab.research.google.com/drive/1t1hF_Vs4xIyLGMw_B9l1G6qzLBxLB5eG?usp=sharing""")
 
 
 st.write("-------------------------------------------------------")
