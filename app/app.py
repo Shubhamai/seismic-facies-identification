@@ -39,7 +39,7 @@ Google Colab Notebook : https://colab.research.google.com/drive/1t1hF_Vs4xIyLGMw
 st.write("-------------------------------------------------------")
 st.write("")
 
-st.image("../images/notebook.gif",
+st.image("./images/notebook.gif",
          caption="The Complete Colab Notebook",
          use_column_width=True)
 
@@ -72,8 +72,8 @@ st.write("")
 st.title("Data Visualisations")
 
 # Loading the dataset
-X = np.load("X.npy")
-Y = np.load("y.npy")
+X = np.load("../data/X.npy")
+Y = np.load("../data/y.npy")
 
 # Making a subplot with 1 row and 2 column
 fig = make_subplots(1, 2, subplot_titles=("Image", "Label"))
