@@ -4,6 +4,22 @@ This Github repo is based on the AICrowd Facies Identification Challenge in whic
 
 ![Example](./images/image.png)
 
+# Table of Contents
+
+* [Motivation](#Motivation)
+* [The Notebook](#The-Notebook)
+* [The Application](#the-application)
+* [About](#about)
+  * [Tools Used](#tools-used)
+  * [Dataset](#dataset)
+  * [Evaluation](#evaluation)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#Prerequisites)
+  * [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#license)
+* [Contact](#contact)
+
 # Motivation
 
 My main motivation to work on this project is that it was 3D image dataset rather than 2D image dataset. And yes, I actually make this a 2D problem because 3D convolutions are very inefficient & computationally expeensive. 
@@ -37,19 +53,21 @@ I also made an Application using Streamlit which contains the Data Visualisation
 
 The Application is also deployed on Heroku!, check this out! https://seismic-facies-identification.herokuapp.com/
 
-# Tools Used 
+# About
+
+## Tools Used 
 - Tensorflow 2.0
 - Streamlit
 - Plotly
 - CV2, pandas, numpy and much more...
 
-# [Dataset](https://www.aicrowd.com/challenges/seismic-facies-identification-challenge#dataset)
+## [Dataset](https://www.aicrowd.com/challenges/seismic-facies-identification-challenge#dataset)
 
 We have 3D dataset both ( features X, and labels Y ) with **shape for X is 1006 × 782 × 590**, in axis corresponding **Z, X, Y** and Y in 1006 × 782 × 590 in also axis corresponsing Z, X, Y.
 
 We can say that we have total of **2,378 2D trainig images** with their corresponsing labels and we also have same number of **2,378 2D testing images** which we will predict labels for.
 
-# Evaluation
+## Evaluation
 The evaluation metrics are the F1 score and accuracy.
 
 
@@ -77,7 +95,4 @@ Distributed under the GNU General Public License v3.0. See `LICENSE` for more in
 
 # Contact
 
-Shubhamai - [@Shubhamai](https://twitter.com/Shubhamai) · shubham.aiengineer@gmail.com
-
-Website - [Shubhamai.com](https://Shubhamai.com)
-
+Shubhamai - [Shubhamai.com](https://Shubhamai.com) · shubham.aiengineer@gmail.com · [@Shubhamai](https://twitter.com/Shubhamai)
