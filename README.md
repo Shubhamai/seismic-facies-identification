@@ -24,7 +24,7 @@ This Github repo is based on the AICrowd Facies Identification Challenge in whic
 
 My main motivation to work on this project is that it was 3D image dataset rather than 2D image dataset. And yes, I actually make this a 2D problem because 3D convolutions are very inefficient & computationally expeensive. 
 
-In my last project which was ![Water Segmentation 🌊](https://github.com/Shubhamai/water-segmentation), i used FastAI to build UNet to classifty pixel based on water/no water. But this is muli class pixel classification where there is total of **6 pixel labels**. And instead of making UNet in fastai, i used Tensorflow 2.0 & Keras to make UNet from scratch, ( mainly because of getting a bit more experience on how UNet works ). 
+In my last project which was [Water Segmentation 🌊](https://github.com/Shubhamai/water-segmentation), i used FastAI to build UNet to classifty pixel based on water/no water. But this is muli class pixel classification where there is total of **6 pixel labels**. And instead of making UNet in fastai, i used Tensorflow 2.0 & Keras to make UNet from scratch, ( mainly because of wating to get a bit more experience on how UNet works ). 
 
 # The Notebook
 
@@ -56,10 +56,10 @@ The Application is also deployed on Heroku!, check this out! https://seismic-fac
 # About
 
 ## Tools Used 
-- Tensorflow 2.0
-- Streamlit
-- Plotly
-- CV2, pandas, numpy and much more...
+- [Tensorflow 2.0](http://tensorflow.org/)
+- [Streamlit](https://streamlit.io/)
+- [Plotly](http://plotly.com/python/)
+- [CV2](https://opencv.org/), [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/) and much more...
 
 ## [Dataset](https://www.aicrowd.com/challenges/seismic-facies-identification-challenge#dataset)
 
