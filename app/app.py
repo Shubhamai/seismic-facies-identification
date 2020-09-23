@@ -1,5 +1,4 @@
 # Importing Necessary Libraries
-#
 import streamlit as st
 from PIL import Image
 import numpy as np
@@ -10,9 +9,11 @@ from plotly.subplots import make_subplots
 from streamlit_cropper import st_cropper
 import cv2
 
+# Setting the title & icon
 st.beta_set_page_config(
     page_title="Seismic Facies Identification", page_icon="🌍")
 
+# Removing the Meno
 hide_streamlit_style = """
 <style>
 #MainMenu {visibility: hidden;}
@@ -21,6 +22,7 @@ footer {visibility: hidden;}
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
+# Setting the page title & Description
 st.title("🌎 Seismic Facies Identification")
 st.markdown(
     """This is the **Image Visulaisation & Preprocessing Application** for this challange, for the complete data exploration & submitting please checkout my [Colab Notebook Here](https://colab.research.google.com/drive/1t1hF_Vs4xIyLGMw_B9l1G6qzLBxLB5eG?usp=sharing)
@@ -40,6 +42,7 @@ st.write("")
 st.image("notebook.gif",
          caption="The Complete Colab Notebook",
          use_column_width=True)
+
 st.write("")
 st.write("")
 
@@ -47,7 +50,6 @@ st.markdown(
     "## [Problem](https://www.aicrowd.com/challenges/seismic-facies-identification-challenge#introduction)")
 
 st.write("Segmentating the 3D seismic image into an image with **each pixel can be classfied into 6 labels** based on patterns in the image.")
-
 
 st.write("")
 
@@ -69,6 +71,7 @@ st.write("")
 
 st.title("Data Visualisations")
 
+# Loading the dataset
 X = np.load("X.npy")
 Y = np.load("y.npy")
 
@@ -85,6 +88,7 @@ fig.update_layout(title_text="Seismic Image & Label")
 st.plotly_chart(fig,)
 
 
+# Visualising a surface plot
 fig = make_subplots(1, 2, subplot_titles=("Image", "Label"), specs=[
                     [{"type": "Surface"}, {"type": "Surface"}]])
 
@@ -157,9 +161,9 @@ st.title("Image Preprocessing")
 
 st.write("Just use some of the methods in the sidebar and see the result! You can also crop to see certain part of images")
 
-img = cv2.imread("img_781.jpg")
+img = cv2.imread("./images/img_781.jpg")
 
-#st.image(img, use_column_width=True, height=100, width=100)
+
 
 preprocessing_methods = st.sidebar.multiselect("Image Preprocessing", [
                                                "Threshold", "SobelX", "SobelY", "Laplacian", "Erosion", "Dialation", "Sharping"], default=None)
@@ -167,7 +171,7 @@ preprocessing_methods = st.sidebar.multiselect("Image Preprocessing", [
 st.sidebar.text("")
 st.sidebar.warning("Use Threshold, Erosion or Dialation to change settings")
 
-
+# Setting the preprocessing 
 if preprocessing_methods != []:
 
     for i in preprocessing_methods:
@@ -231,7 +235,7 @@ if preprocessing_methods != []:
 
 st.subheader("Output & Label")
 
-# Foind from here https://gist.github.com/treuille/2ce0acb6697f205e44e3e0f576e810b7
+# Displaying multiple image side by side in streamlit, found from here https://gist.github.com/treuille/2ce0acb6697f205e44e3e0f576e810b7
 def paginator(label, items, items_per_page=10, on_sidebar=True):
    
     items = list(items)
@@ -242,14 +246,14 @@ def paginator(label, items, items_per_page=10, on_sidebar=True):
     return itertools.islice(enumerate(items), min_index, max_index)
 
 
-sunset_imgs = [img, "img_781.png"]
+sunset_imgs = [img, "./images/img_781.png"]
 
 image_iterator = paginator("Select a sunset page", sunset_imgs)
 indices_on_page, images_on_page = map(list, zip(*image_iterator))
 #st.image(images_on_page, width=300, caption=indices_on_page, use_column_width=True)
 
 
-st.image([img, "img_781.png"], use_column_width=False, width=336, clamp=True)
+st.image([img, "./images/img_781.png"], use_column_width=False, width=336, clamp=True)
 
 st.subheader("Cropper")
 
