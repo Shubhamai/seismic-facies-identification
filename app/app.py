@@ -72,8 +72,8 @@ st.write("")
 st.title("Data Visualisations")
 
 # Loading the dataset
-X = np.load("../data/X.npy")
-Y = np.load("../data/y.npy")
+X = np.load("./data/X.npy")
+Y = np.load("./data/y.npy")
 
 # Making a subplot with 1 row and 2 column
 fig = make_subplots(1, 2, subplot_titles=("Image", "Label"))
@@ -161,7 +161,7 @@ st.title("Image Preprocessing")
 
 st.write("Just use some of the methods in the sidebar and see the result! You can also crop to see certain part of images")
 
-img = cv2.imread("../images/img_781.jpg")
+img = cv2.imread("./images/img_781.jpg")
 
 
 
@@ -246,14 +246,13 @@ def paginator(label, items, items_per_page=10, on_sidebar=True):
     return itertools.islice(enumerate(items), min_index, max_index)
 
 
-sunset_imgs = [img, "../images/img_781.png"]
+sunset_imgs = [img, "./images/img_781.png"]
 
 image_iterator = paginator("Select a sunset page", sunset_imgs)
 indices_on_page, images_on_page = map(list, zip(*image_iterator))
-#st.image(images_on_page, width=300, caption=indices_on_page, use_column_width=True)
 
 
-st.image([img, "../images/img_781.png"], use_column_width=False, width=336, clamp=True)
+st.image([img, "./images/img_781.png"], use_column_width=False, width=336, clamp=True)
 
 st.subheader("Cropper")
 
