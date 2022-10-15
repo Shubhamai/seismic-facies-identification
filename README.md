@@ -92,7 +92,3 @@ Below are the steps to run the application in your PC or laptop, whatever.
 
 # License ![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)
 Distributed under the GNU General Public License v3.0. See `LICENSE` for more information.
-
-# Contact
-
-Shubhamai - [Shubhamai.com](https://Shubhamai.com) · shubham.aiengineer@gmail.com · [@Shubhamai](https://twitter.com/Shubhamai)
